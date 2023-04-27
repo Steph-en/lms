@@ -1,0 +1,61 @@
+server:
+  port: 8081
+  tomcat:
+    threads:
+      max: 200
+
+logging:
+  file:
+    name: lms-service.log
+  logback:
+    rollingpolicy:
+      file-name-pattern: lms-service-%d{yyyy-MM-dd}.%i.log
+      max-file-size: 1MB
+      total-size-cap: 10MB
+      max-history: 30
+      clean-history-on-start: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always
+
+core:
+  pool:
+    size: 3
+max:
+  pool:
+    size: 7
+
+springdoc:
+  packagesToScan: com.ait
+  swagger-ui:
+    path: documentation
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: lms-service
+  boot:
+    admin:
+      client:
+        url: ""
+  datasource:
+    url: jdbc:mysql://localhost:3306/lms-db
+    username: appuser
+    password: P@ssw0rd
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  integration:
+    management:
+      default-logging-enabled: on
