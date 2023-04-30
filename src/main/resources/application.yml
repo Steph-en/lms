@@ -46,8 +46,8 @@ spring:
         url: ""
   datasource:
     url: jdbc:mysql://localhost:3306/lms-db
-    username: appuser
-    password: P@ssw0rd
+    username: root
+    password: Ghost@2end
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

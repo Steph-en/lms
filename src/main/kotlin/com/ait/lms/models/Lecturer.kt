@@ -30,4 +30,17 @@ class Lecturer(
 
     @OneToOne
     var course: Course?,
-): User
+): User {
+    constructor() : this(
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null)
+}

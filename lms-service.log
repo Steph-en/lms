@@ -1,67 +1,276 @@
-2023-04-27 10:03:28.622  INFO 30873 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Starting LMSServiceApplicationKt using Java 18.0.1.1 on kays-MacBook-Pro.local with PID 30873 (/Users/godwinduah/IdeaProjects/lms-service/target/classes started by godwinduah in /Users/godwinduah/IdeaProjects/lms-service)
-2023-04-27 10:03:28.623  INFO 30873 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : The following profiles are active: dev
-2023-04-27 10:03:28.667  INFO 30873 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-04-27 10:03:28.667  INFO 30873 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-04-27 10:03:29.261  INFO 30873 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-27 10:03:29.345  INFO 30873 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 5 JPA repository interfaces.
-2023-04-27 10:03:29.630  INFO 30873 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2023-04-27 10:03:29.635  INFO 30873 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-27 10:03:29.635  INFO 30873 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2023-04-27 10:03:29.669  INFO 30873 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-04-27 10:03:29.669  INFO 30873 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1001 ms
-2023-04-27 10:03:29.832  INFO 30873 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-27 10:03:29.860  INFO 30873 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
-2023-04-27 10:03:29.943  INFO 30873 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-04-27 10:03:29.990  INFO 30873 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-27 10:03:30.212  INFO 30873 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-27 10:03:30.222  INFO 30873 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-04-27 10:03:30.353  INFO 30873 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Student (class must be instantiated by Interceptor)
-2023-04-27 10:03:30.359  INFO 30873 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.CourseRegistration (class must be instantiated by Interceptor)
-2023-04-27 10:03:30.359  INFO 30873 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Course (class must be instantiated by Interceptor)
-2023-04-27 10:03:30.360  INFO 30873 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Lecturer (class must be instantiated by Interceptor)
-2023-04-27 10:03:30.360  INFO 30873 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Admin (class must be instantiated by Interceptor)
-2023-04-27 10:03:30.543  INFO 30873 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-27 10:03:30.550  INFO 30873 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-27 10:03:30.925  WARN 30873 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-27 10:03:31.437  INFO 30873 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-27 10:03:31.441  INFO 30873 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2023-04-27 10:03:31.487  INFO 30873 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2023-04-27 10:03:31.499  INFO 30873 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Started LMSServiceApplicationKt in 3.065 seconds (JVM running for 3.617)
-2023-04-27 10:03:31.633  INFO 30873 --- [RMI TCP Connection(2)-169.254.212.65] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-27 10:03:31.633  INFO 30873 --- [RMI TCP Connection(2)-169.254.212.65] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-27 10:03:31.634  INFO 30873 --- [RMI TCP Connection(2)-169.254.212.65] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-04-27 10:04:00.879  INFO 30873 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-27 10:04:00.896  INFO 30873 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-27 10:04:00.983  INFO 30873 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-27 10:19:45.506  INFO 33025 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Starting LMSServiceApplicationKt using Java 18.0.1.1 on kays-MacBook-Pro.local with PID 33025 (/Users/godwinduah/IdeaProjects/lms/target/classes started by godwinduah in /Users/godwinduah/IdeaProjects/lms)
-2023-04-27 10:19:45.507  INFO 33025 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : The following profiles are active: dev
-2023-04-27 10:19:45.540  INFO 33025 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-04-27 10:19:45.541  INFO 33025 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-04-27 10:19:46.101  INFO 33025 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-27 10:19:46.172  INFO 33025 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
-2023-04-27 10:19:46.446  INFO 33025 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2023-04-27 10:19:46.452  INFO 33025 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-27 10:19:46.452  INFO 33025 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2023-04-27 10:19:46.490  INFO 33025 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-04-27 10:19:46.490  INFO 33025 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 949 ms
-2023-04-27 10:19:46.639  INFO 33025 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-27 10:19:46.668  INFO 33025 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
-2023-04-27 10:19:46.753  INFO 33025 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-04-27 10:19:46.794  INFO 33025 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-27 10:19:47.048  INFO 33025 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-27 10:19:47.056  INFO 33025 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-04-27 10:19:47.194  INFO 33025 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Student (class must be instantiated by Interceptor)
-2023-04-27 10:19:47.199  INFO 33025 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.CourseRegistration (class must be instantiated by Interceptor)
-2023-04-27 10:19:47.199  INFO 33025 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Course (class must be instantiated by Interceptor)
-2023-04-27 10:19:47.200  INFO 33025 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Lecturer (class must be instantiated by Interceptor)
-2023-04-27 10:19:47.201  INFO 33025 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Admin (class must be instantiated by Interceptor)
-2023-04-27 10:19:47.351  INFO 33025 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-27 10:19:47.357  INFO 33025 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-27 10:19:47.720  WARN 33025 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-27 10:19:48.180  INFO 33025 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-27 10:19:48.183  INFO 33025 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2023-04-27 10:19:48.211  INFO 33025 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2023-04-27 10:19:48.222  INFO 33025 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Started LMSServiceApplicationKt in 2.916 seconds (JVM running for 3.419)
-2023-04-27 10:19:48.263  INFO 33025 --- [RMI TCP Connection(2)-169.254.212.65] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-27 10:19:48.263  INFO 33025 --- [RMI TCP Connection(2)-169.254.212.65] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-27 10:19:48.264  INFO 33025 --- [RMI TCP Connection(2)-169.254.212.65] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-30 10:29:36.989  INFO 47429 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Starting LMSServiceApplicationKt using Java 17.0.7 on Darks-MacBook-Pro.local with PID 47429 (/Users/snow/Downloads/lms/target/classes started by snow in /Users/snow/Downloads/lms)
+2023-04-30 10:29:36.996  INFO 47429 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : The following profiles are active: dev
+2023-04-30 10:29:37.082  INFO 47429 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-30 10:29:37.084  INFO 47429 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-30 10:29:38.470  INFO 47429 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-30 10:29:38.570  INFO 47429 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 5 JPA repository interfaces.
+2023-04-30 10:29:39.023  INFO 47429 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-30 10:29:39.036  INFO 47429 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-30 10:29:39.036  INFO 47429 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-04-30 10:29:39.123  INFO 47429 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-30 10:29:39.123  INFO 47429 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2039 ms
+2023-04-30 10:29:39.390  INFO 47429 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-30 10:29:39.413  INFO 47429 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2023-04-30 10:29:39.483  INFO 47429 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-30 10:29:39.530  INFO 47429 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-30 10:29:39.798  INFO 47429 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-30 10:29:39.808  INFO 47429 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-04-30 10:29:39.959  INFO 47429 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Student (class must be instantiated by Interceptor)
+2023-04-30 10:29:39.964  INFO 47429 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.CourseRegistration (class must be instantiated by Interceptor)
+2023-04-30 10:29:39.965  INFO 47429 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Course (class must be instantiated by Interceptor)
+2023-04-30 10:29:39.966  INFO 47429 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Lecturer (class must be instantiated by Interceptor)
+2023-04-30 10:29:39.968  INFO 47429 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Admin (class must be instantiated by Interceptor)
+2023-04-30 10:29:40.145  INFO 47429 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-30 10:29:40.157  INFO 47429 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-30 10:29:41.000  WARN 47429 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-30 10:29:42.064  INFO 47429 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-30 10:29:42.067  INFO 47429 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-04-30 10:29:42.114  INFO 47429 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-04-30 10:29:42.135  INFO 47429 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Started LMSServiceApplicationKt in 5.549 seconds (JVM running for 6.275)
+2023-04-30 10:29:42.641  INFO 47429 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-30 10:29:42.641  INFO 47429 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-30 10:29:42.642  INFO 47429 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-30 10:30:21.420  INFO 47429 --- [http-nio-8081-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 492 ms
+2023-04-30 10:33:17.732  INFO 47429 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-30 10:33:17.737  INFO 47429 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-30 10:33:17.753  INFO 47429 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-30 10:33:30.042  INFO 47476 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Starting LMSServiceApplicationKt using Java 17.0.7 on Darks-MacBook-Pro.local with PID 47476 (/Users/snow/Downloads/lms/target/classes started by snow in /Users/snow/Downloads/lms)
+2023-04-30 10:33:30.045  INFO 47476 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : The following profiles are active: dev
+2023-04-30 10:33:30.126  INFO 47476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-30 10:33:30.131  INFO 47476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-30 10:33:31.207  INFO 47476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-30 10:33:31.296  INFO 47476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 5 JPA repository interfaces.
+2023-04-30 10:33:31.752  INFO 47476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-30 10:33:31.765  INFO 47476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-30 10:33:31.765  INFO 47476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-04-30 10:33:31.849  INFO 47476 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-30 10:33:31.850  INFO 47476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1719 ms
+2023-04-30 10:33:32.113  INFO 47476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-30 10:33:32.133  INFO 47476 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2023-04-30 10:33:32.201  INFO 47476 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-30 10:33:32.251  INFO 47476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-30 10:33:32.483  INFO 47476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-30 10:33:32.494  INFO 47476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-04-30 10:33:32.653  INFO 47476 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Student (class must be instantiated by Interceptor)
+2023-04-30 10:33:32.658  INFO 47476 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.CourseRegistration (class must be instantiated by Interceptor)
+2023-04-30 10:33:32.658  INFO 47476 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Course (class must be instantiated by Interceptor)
+2023-04-30 10:33:32.659  INFO 47476 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Lecturer (class must be instantiated by Interceptor)
+2023-04-30 10:33:32.661  INFO 47476 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.ait.lms.models.Admin (class must be instantiated by Interceptor)
+2023-04-30 10:33:32.798  INFO 47476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-30 10:33:32.803  INFO 47476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-30 10:33:33.697  WARN 47476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-30 10:33:34.653  INFO 47476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-30 10:33:34.657  INFO 47476 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-04-30 10:33:34.697  INFO 47476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-04-30 10:33:34.717  INFO 47476 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Started LMSServiceApplicationKt in 5.078 seconds (JVM running for 5.863)
+2023-04-30 10:33:34.829  INFO 47476 --- [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-30 10:33:34.830  INFO 47476 --- [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-30 10:33:34.830  INFO 47476 --- [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-04-30 10:33:40.796  INFO 47476 --- [http-nio-8081-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 483 ms
+2023-04-30 10:34:38.345 ERROR 47476 --- [http-nio-8081-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.hibernate.InstantiationException: No default constructor for entity:  : com.ait.lms.models.Lecturer
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:85) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:105) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.instantiate(AbstractEntityTuplizer.java:705) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.instantiate(AbstractEntityPersister.java:5287) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1652) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.instanceNotYetLoaded(Loader.java:1774) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.getRow(Loader.java:1624) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.getRowFromResultSet(Loader.java:748) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.getRowsFromResultSet(Loader.java:1047) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.processResultSet(Loader.java:998) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:967) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2868) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2850) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2682) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2677) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:540) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1468) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:399) ~[spring-data-jpa-2.6.0.jar:2.6.0]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:84) ~[spring-data-jpa-2.6.0.jar:2.6.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:638) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.6.0.jar:2.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.data.repository.core.support.MethodInvocationValidator.invoke(MethodInvocationValidator.java:98) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.13.jar:5.3.13]
+	at jdk.proxy4/jdk.proxy4.$Proxy133.findAll(Unknown Source) ~[na:na]
+	at com.ait.lms.services.ServiceTier.findAllLecturers(ServiceTier.kt:34) ~[classes/:na]
+	at com.ait.lms.controllers.UserController.getLecturers(UserController.kt:646) ~[classes/:na]
+	at com.ait.lms.controllers.UserController$$FastClassBySpringCGLIB$$8eac7d29.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.interceptor.AsyncExecutionAspectSupport.lambda$doSubmit$3(AsyncExecutionAspectSupport.java:276) ~[spring-aop-5.3.13.jar:5.3.13]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-04-30 10:34:38.348 ERROR 47476 --- [http-nio-8081-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : com.ait.lms.models.Lecturer; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.ait.lms.models.Lecturer] with root cause
+
+org.hibernate.InstantiationException: No default constructor for entity:  : com.ait.lms.models.Lecturer
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:85) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:105) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.instantiate(AbstractEntityTuplizer.java:705) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.instantiate(AbstractEntityPersister.java:5287) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1652) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.instanceNotYetLoaded(Loader.java:1774) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.getRow(Loader.java:1624) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.getRowFromResultSet(Loader.java:748) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.getRowsFromResultSet(Loader.java:1047) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.processResultSet(Loader.java:998) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:967) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2868) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2850) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2682) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2677) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:540) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1468) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:399) ~[spring-data-jpa-2.6.0.jar:2.6.0]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:84) ~[spring-data-jpa-2.6.0.jar:2.6.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:638) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.6.0.jar:2.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.data.repository.core.support.MethodInvocationValidator.invoke(MethodInvocationValidator.java:98) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.13.jar:5.3.13]
+	at jdk.proxy4/jdk.proxy4.$Proxy133.findAll(Unknown Source) ~[na:na]
+	at com.ait.lms.services.ServiceTier.findAllLecturers(ServiceTier.kt:34) ~[classes/:na]
+	at com.ait.lms.controllers.UserController.getLecturers(UserController.kt:646) ~[classes/:na]
+	at com.ait.lms.controllers.UserController$$FastClassBySpringCGLIB$$8eac7d29.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.interceptor.AsyncExecutionAspectSupport.lambda$doSubmit$3(AsyncExecutionAspectSupport.java:276) ~[spring-aop-5.3.13.jar:5.3.13]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-04-30 10:36:05.048  INFO 47476 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-30 10:36:05.052  INFO 47476 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-30 10:36:05.062  INFO 47476 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-30 10:41:03.792  INFO 47559 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Starting LMSServiceApplicationKt using Java 17.0.7 on Darks-MacBook-Pro.local with PID 47559 (/Users/snow/Downloads/lms/target/classes started by snow in /Users/snow/Downloads/lms)
+2023-04-30 10:41:03.795  INFO 47559 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : The following profiles are active: dev
+2023-04-30 10:41:03.864  INFO 47559 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-30 10:41:03.868  INFO 47559 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-30 10:41:05.012  INFO 47559 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-30 10:41:05.117  INFO 47559 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 5 JPA repository interfaces.
+2023-04-30 10:41:05.578  INFO 47559 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-30 10:41:05.588  INFO 47559 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-30 10:41:05.589  INFO 47559 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-04-30 10:41:05.707  INFO 47559 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-30 10:41:05.708  INFO 47559 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1839 ms
+2023-04-30 10:41:05.986  INFO 47559 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-30 10:41:06.010  INFO 47559 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2023-04-30 10:41:06.091  INFO 47559 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-30 10:41:06.132  INFO 47559 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-30 10:41:06.403  INFO 47559 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-30 10:41:06.413  INFO 47559 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-04-30 10:41:06.720  INFO 47559 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-30 10:41:06.726  INFO 47559 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-30 10:41:07.431  WARN 47559 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-30 10:41:08.414  INFO 47559 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-30 10:41:08.418  INFO 47559 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-04-30 10:41:08.465  INFO 47559 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-04-30 10:41:08.526  INFO 47559 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Started LMSServiceApplicationKt in 5.144 seconds (JVM running for 5.777)
+2023-04-30 10:41:08.677  INFO 47559 --- [RMI TCP Connection(2)-172.20.10.2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-30 10:41:08.677  INFO 47559 --- [RMI TCP Connection(2)-172.20.10.2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-30 10:41:08.679  INFO 47559 --- [RMI TCP Connection(2)-172.20.10.2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-04-30 11:16:40.625  WARN 47559 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m34s89ms).
+2023-04-30 12:55:10.075  WARN 47559 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h38m29s458ms).
+2023-04-30 13:43:49.431  WARN 47559 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m39s354ms).
+2023-04-30 13:52:14.595  WARN 47559 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m25s165ms).
+2023-04-30 13:54:40.553  INFO 47559 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-30 13:54:40.559  INFO 47559 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-30 13:54:40.580  INFO 47559 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-30 14:55:03.444  INFO 48457 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Starting LMSServiceApplicationKt using Java 17.0.7 on Darks-MBP with PID 48457 (/Users/snow/Downloads/lms/target/classes started by snow in /Users/snow/Downloads/lms)
+2023-04-30 14:55:03.446  INFO 48457 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : The following profiles are active: dev
+2023-04-30 14:55:03.514  INFO 48457 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-30 14:55:03.519  INFO 48457 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-30 14:55:04.632  INFO 48457 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-30 14:55:04.737  INFO 48457 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 5 JPA repository interfaces.
+2023-04-30 14:55:05.177  INFO 48457 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-30 14:55:05.187  INFO 48457 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-30 14:55:05.187  INFO 48457 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2023-04-30 14:55:05.267  INFO 48457 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-30 14:55:05.267  INFO 48457 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1748 ms
+2023-04-30 14:55:05.516  INFO 48457 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-30 14:55:05.540  INFO 48457 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2023-04-30 14:55:05.621  INFO 48457 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-30 14:55:05.662  INFO 48457 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-30 14:55:05.958  INFO 48457 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-30 14:55:05.968  INFO 48457 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-04-30 14:55:06.269  INFO 48457 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-30 14:55:06.275  INFO 48457 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-30 14:55:06.981  WARN 48457 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-30 14:55:07.985  INFO 48457 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-30 14:55:07.989  INFO 48457 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-04-30 14:55:08.026  INFO 48457 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-04-30 14:55:08.042  INFO 48457 --- [restartedMain] com.ait.lms.LMSServiceApplicationKt      : Started LMSServiceApplicationKt in 5.016 seconds (JVM running for 5.983)
+2023-04-30 14:55:08.529  INFO 48457 --- [RMI TCP Connection(3)-192.168.8.138] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-30 14:55:08.530  INFO 48457 --- [RMI TCP Connection(3)-192.168.8.138] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-30 14:55:08.530  INFO 48457 --- [RMI TCP Connection(3)-192.168.8.138] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-04-30 14:55:33.037  INFO 48457 --- [http-nio-8081-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 477 ms

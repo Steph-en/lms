@@ -56,4 +56,20 @@ class Student(
 
     @JsonProperty(value = "password", access = JsonProperty.Access.WRITE_ONLY)
     override var password: String?,
-) : User
+) : User{
+    constructor() : this(
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null)
+}

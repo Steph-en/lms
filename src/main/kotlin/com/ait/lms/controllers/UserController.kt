@@ -374,7 +374,7 @@ class UserController(@Autowired val utils: Utils, @Autowired val serviceTier: Se
     @Async
     @Operation(summary = "This endpoint is used to fetch a new member user by ID")
     @GetMapping("/user/{id}")
-    fun getMember(
+    fun getStudentByID(
         @PathVariable id: Long,
         httpServletRequest: HttpServletRequest,
         httpServletResponse: HttpServletResponse
@@ -382,7 +382,7 @@ class UserController(@Autowired val utils: Utils, @Autowired val serviceTier: Se
         val requestId: String = httpServletRequest.session.id
         val message: String?
 
-        val user = serviceTier.findMemberByID(id)
+        val user = serviceTier.findStudentByID(id)
         if (user != null) {
             message = "Success."
             httpServletResponse.status = Status.OK.status
@@ -403,7 +403,7 @@ class UserController(@Autowired val utils: Utils, @Autowired val serviceTier: Se
 
     @Async
     @Operation(summary = "This endpoint is used to delete an existing member user")
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/student/{id}")
     fun deleteMember(
         @PathVariable id: Long,
         httpServletRequest: HttpServletRequest,
@@ -428,15 +428,15 @@ class UserController(@Autowired val utils: Utils, @Autowired val serviceTier: Se
 
     @Async
     @Operation(summary = "This endpoint is used to find all existing member users")
-    @GetMapping("/users" + "")
-    fun getMembers(
+    @GetMapping("/students" + "")
+    fun getAllStudents(
         httpServletRequest: HttpServletRequest,
         httpServletResponse: HttpServletResponse
     ): CompletableFuture<GeneralResponse> {
         val requestId: String = httpServletRequest.session.id
         val message: String?
 
-        val members = serviceTier.findAllMembers()
+        val members = serviceTier.findAllStudents()
         message = "Success."
         httpServletResponse.status = Status.OK.status
         return CompletableFuture.completedFuture(
@@ -619,6 +619,31 @@ class UserController(@Autowired val utils: Utils, @Autowired val serviceTier: Se
         val message: String?;
 
         val admins = serviceTier.findAllAdmins()
+        message = "Success."
+        httpServletResponse.status = Status.OK.status
+        return CompletableFuture.completedFuture(
+            GeneralResponse(
+                requestId,
+                httpServletResponse.status,
+                message,
+                admins!!.count(),
+                admins.toMutableList()
+            )
+        )
+    }
+
+
+    @Async
+    @Operation(summary = "This endpoint is used to find all existing lecturers users")
+    @GetMapping("/lecturers")
+    fun getLecturers(
+        httpServletRequest: HttpServletRequest,
+        httpServletResponse: HttpServletResponse
+    ): CompletableFuture<GeneralResponse> {
+        val requestId: String = httpServletRequest.session.id
+        val message: String?;
+
+        val admins = serviceTier.findAllLecturers()
         message = "Success."
         httpServletResponse.status = Status.OK.status
         return CompletableFuture.completedFuture(

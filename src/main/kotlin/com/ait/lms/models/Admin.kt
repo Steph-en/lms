@@ -17,4 +17,16 @@ class Admin(
     override var isVerified: Boolean?,
     override var createdOn: String?,
     override var updatedOn: String?,
-): User
+): User{
+    constructor() : this(
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null)
+}

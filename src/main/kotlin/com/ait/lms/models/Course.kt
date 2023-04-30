@@ -31,4 +31,12 @@ class Course(
 
     @JsonProperty(value = "updated_on")
     var updatedOn: LocalDateTime? = LocalDateTime.now(),
-)
+){
+    constructor() : this(
+        null,
+        null,
+        null,
+        null,
+        null,
+        null)
+}

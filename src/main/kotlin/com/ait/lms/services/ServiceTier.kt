@@ -26,8 +26,12 @@ class ServiceTier(
             studentRepository.delete(student)
     }
 
-    fun findAllMembers(): MutableIterable<Student?>? {
+    fun findAllStudents(): MutableIterable<Student?>? {
         return studentRepository.findAll()
+    }
+
+    fun findAllLecturers(): MutableIterable<Lecturer?>? {
+        return lecturerRepository.findAll()
     }
 
     fun findAdminByID(id: Long): Admin? {
@@ -38,7 +42,7 @@ class ServiceTier(
         return adminRepository.findByEmailAddress(email)
     }
 
-    fun findMemberByID(id: Long): Student? {
+    fun findStudentByID(id: Long): Student? {
         return studentRepository.findById(id).orElse(null)
     }
 
